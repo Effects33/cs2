@@ -28,6 +28,15 @@ alias "+runthrow" "+forward;+jump;"
 alias "-runthrow" "-jump;-forward"
 bind "." "+runthrow;+throwaction"
 
+key_updatelayout
+
+bind "MOUSE1" "+clear_bullets_after_shooting"    
+bind "MOUSE2" "+attack2"
+ 
+//Alias to Clear Bullet Holes after Shooting (Visibility Advantage)
+alias -clear_bullets_after_shooting "-attack; r_cleardecals"
+alias +clear_bullets_after_shooting "+attack"
+
 //Movement Keys
 bind "q" "+left"
 bind "d" "+right" 
@@ -35,50 +44,26 @@ bind "z" "+forward"
 bind "s" "+back"  
 bind "ctrl" "+duck" 
 bind "shift" "+sprint" 
-bind "mwheeldown" "+jump"
-
-//Unbinds
-unbind "alt"
-unbind "mouse4"
-unbind "mwheelup"
-unbind "k"
-unbind "m"
-unbind "p"
-unbind "i"
-unbind "z"
-unbind "/"
-unbind "f1"
-unbind "f2"
-unbind "f3"
-unbind "f4"
-unbind "f5"
+bind "space" "+jump"
 
 //Binds
-bind "mouse3" "toggle cl_crosshairsize 999 0"
+bind "T" "toggle cl_crosshairsize 999 0"
 bind "1" "slot1"
 bind "2" "slot2"
 bind "3" "slot3"
 bind "4" "slot4"
 bind "5" "slot5"
-bind "6" "viewmodel_offset_y 2; viewmodel_fov 68"
-bind "7" "toggle viewmodel_presetpos 3 1"
 bind "b" "buymenu"
-bind "c" "toggle cl_righthand 0 1"
 bind "e" "+use"
 bind "f" "+lookatweapon"
 bind "g" "drop"
 bind "h" "noclip"
-bind "l" "+spray_menu"
-bind "n" "+voicerecord"
-bind "o" "give weapon_flashbang; give weapon_molotov;give weapon_hegrenade; give weapon_smokegrenade;give weapon_ak47"
-bind "q" "lastinv"
+bind "l" "give weapon_flashbang; give weapon_molotov;give weapon_hegrenade; give weapon_smokegrenade;give weapon_ak47"
 bind "r" "+reload; -attack; -attack2;"
 bind "u" "messagemode2"
 bind "v" "toggle cl_radar_scale 1 0.3"
 bind "x" "player_ping"
 bind "y" "messagemode"
-bind "[" "+radialradio"
-bind "]" "+radialradio2"
 bind "`" "toggleconsole"
 bind "\" "teammenu"
 bind "TAB" "+showscores"
@@ -86,50 +71,14 @@ bind "ESCAPE" "cancelselect"
 bind "DEL" "mute"
 bind "PAUSE" "pause"
 
-
-
-//Current Crosshair
-cl_crosshairalpha 255
-cl_crosshairgap -5 
-cl_crosshair_outlinethickness 1
-cl_crosshaircolor 4
-cl_crosshairthickness 1.5
-cl_crosshairstyle 4
-cl_crosshairsize 0
-cl_crosshairdot 1
-cl_crosshaircolor_b 0
-cl_crosshaircolor_g 0
-cl_crosshaircolor_r 0
-cl_crosshair_drawoutline 1
-
-
-
-//Crosshairs
-bind "8" "cl_crosshairalpha 255; cl_crosshairstyle 4;cl_crosshaircolor 4;cl_crosshair_outlinethickness 1; cl_crosshair_drawoutline 1; cl_crosshairthickness 1.5; cl_crosshairgap -5; cl_crosshairdot 1; cl_crosshairsize 0;cl_crosshaircolor_b 255; cl_crosshaircolor_g 255; cl_crosshaircolor_r 255"
-
-bind "9" "cl_crosshairalpha 255; cl_crosshairstyle 4;cl_crosshaircolor 4;cl_crosshair_outlinethickness 1; cl_crosshair_drawoutline 1; cl_crosshairthickness 1; cl_crosshairgap -5; cl_crosshairdot 1; cl_crosshairsize 0;cl_crosshaircolor_b 255; cl_crosshaircolor_g 255; cl_crosshaircolor_r 255"
-
-
-bind "0" "cl_crosshairalpha 255;cl_crosshairthickness 1.5; cl_crosshairgap -5; cl_crosshairsize 1; cl_crosshair_drawoutline 0; cl_crosshairdot 0; cl_crosshaircolor 2; cl_crosshaircolor_b 0;cl_crosshaircolor_r 0; cl_crosshaircolor_g 0; cl_crosshair_outlinethickness 0;"
-
-
-bind "-" "cl_crosshairalpha 255;cl_crosshairstyle 4;cl_crosshaircolor 0;cl_crosshair_outlinethickness 1; cl_crosshair_drawoutline 1; cl_crosshairthickness 1; cl_crosshairgap -5; cl_crosshairdot 1; cl_crosshairsize 1;cl_crosshaircolor_b 255; cl_crosshaircolor_g 255; cl_crosshaircolor_r 255"
-
-bind "=" "cl_crosshairalpha 255;cl_crosshairstyle 4;cl_crosshairdot 0; cl_crosshairgap -7; cl_crosshairthickness 0; cl_crosshairsize 2; cl_crosshair_outlinethickness .5; cl_crosshair_drawoutline 1; cl_crosshaircolor 1;cl_crosshaircolor_b 255; cl_crosshaircolor_g 255; cl_crosshaircolor_r 255"
-
-
-//[RED CROSS ZEEQ] bind 9 "cl_crosshairstyle 4;cl_crosshairdot 0; cl_crosshairsize 2.5; cl_crosshairgap -7; cl_crosshairthickness 0; cl_crosshaircolor 0; cl_crosshair_outlinethickness 2; cl_crosshair_drawoutline 1;cl_crosshaircolor_b 255; cl_crosshaircolor_g 255; cl_crosshaircolor_r 255"
-
-
 //Grenade Binds
-bind "MOUSE5" "slot7"
-bind "T" "slot8"
-bind "J" "slot10"
+bind "4" "slot4"
+bind "1" "say ♿"
 
 
 //Settings
-sensitivity 0.74
-zoom_sensitivity_ratio 0.8
+sensitivity 0.685
+zoom_sensitivity_ratio 1
 r_fullscreen_gamma "2.1"
 rate 1000000
 safezonex "0.9"
@@ -142,7 +91,7 @@ cl_color "4"
 cl_radar_square_with_scoreboard 0
 cl_crosshair_sniper_width 2
 cl_player_ping_mute 1
-cl_sniper_auto_rezoom 1
+cl_sniper_auto_rezoom 0
 cl_teammate_colors_show 1
 cl_use_opens_buy_menu 0
 cl_showloadout 1
@@ -177,23 +126,21 @@ snd_ducktovolume 0.55
 snd_gamevoicevolume 1
 snd_gamevolume 1
 snd_mapobjective_volume 0
-snd_menumusic_volume 0
+snd_menumusic_volume 0.5
 snd_musicvolume 1
 snd_mvp_volume 0
 snd_roundaction_volume 0
 snd_roundend_volume 0
-snd_roundstart_volume 0
+snd_roundstart_volume 0.4
 snd_steamaudio_reverb_level_db -3
 snd_steamaudio_enable_perspective_correction 0
 snd_spatialize_lerp 1
-snd_tensecondwarning_volume 0.04
+snd_tensecondwarning_volume 0.4
 snd_toolvolume 1
 snd_voipvolume 1
 snd_headphone_eq 0
-volume 0.01
+volume 0.7
 snd_voipvolume 0.5
-
-clear
 
 // Reverting the changed color.
 log_color "Console" "00000000"
