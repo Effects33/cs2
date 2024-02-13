@@ -70,6 +70,7 @@ bind "TAB" "+showscores"
 bind "ESCAPE" "cancelselect"
 bind "DEL" "mute"
 bind "PAUSE" "pause"
+bind mwheeldown invnext
 
 //Grenade Binds
 bind "4" "slot4"
